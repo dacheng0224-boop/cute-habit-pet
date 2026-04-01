@@ -1,0 +1,335 @@
+:root {
+  --bg: #fff4fb;
+  --card: #ffffff;
+  --line: #ffd1e8;
+  --text: #3b2c35;
+  --accent: #ff7eb6;
+  --accent-soft: #ffe3f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(180deg, #ffeaf5, #fff7fb);
+  color: var(--text);
+}
+
+.app {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px 14px 60px;
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 8px 18px rgba(255, 126, 182, 0.08);
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.topbar h1 {
+  font-size: 24px;
+}
+
+.topbar p {
+  margin-top: 6px;
+  color: #8f5b76;
+}
+
+.habit-form {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 68px 1fr 88px;
+  gap: 8px;
+}
+
+input,
+button {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--accent);
+}
+
+button {
+  background: var(--accent-soft);
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.98);
+}
+
+.habit-list,
+.today-checkins {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.habit-item,
+.checkin-item label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  background: #fffafd;
+}
+
+.habit-item .habit-mark {
+  width: 24px;
+  text-align: center;
+}
+
+.habit-item .habit-name {
+  flex: 1;
+}
+
+.empty {
+  color: #9d8291;
+  font-size: 14px;
+  padding: 8px 2px;
+}
+
+.hint {
+  margin-top: 8px;
+  color: #8f5b76;
+  font-size: 13px;
+}
+
+.calendar-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.calendar-head h2 {
+  font-size: 18px;
+}
+
+.weekdays {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 12px;
+  color: #8f5b76;
+}
+
+.weekdays span {
+  text-align: center;
+  padding: 6px 0;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.day {
+  min-height: 80px;
+  border: 1px solid #ffe3f1;
+  border-radius: 10px;
+  padding: 6px;
+  background: #fff;
+}
+
+.day.blank {
+  border: none;
+  background: transparent;
+}
+
+.day.today {
+  border: 1px solid var(--accent);
+  background: #fff0f8;
+}
+
+.day-num {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.day-count {
+  font-size: 11px;
+  color: #8f5b76;
+  margin-top: 4px;
+}
+
+.day-emojis {
+  font-size: 12px;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.pet-main {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pet-emoji {
+  font-size: 56px;
+  line-height: 1;
+  transform-origin: center bottom;
+  animation: petBounce 2.6s ease-in-out infinite;
+}
+
+.pet-info p {
+  margin: 4px 0;
+}
+
+.pet-stage-wrap {
+  margin-top: 12px;
+}
+
+.pet-stage-track {
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  background: #ffe5f3;
+  overflow: hidden;
+  border: 1px solid #ffd1e8;
+}
+
+.pet-stage-fill {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #ff96c5, #ff74b0);
+  transition: width 420ms ease;
+}
+
+.pet-stage-labels {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #8f5b76;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.pet-stage-labels span {
+  text-align: center;
+}
+
+.pet-scene {
+  margin-top: 12px;
+  height: 68px;
+  border-radius: 12px;
+  border: 1px solid #ffd1e8;
+  background: radial-gradient(circle at 50% 40%, #fff9fd, #ffeaf5);
+  position: relative;
+  overflow: hidden;
+}
+
+.pet-shadow {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  width: 56px;
+  height: 10px;
+  margin-left: -28px;
+  border-radius: 999px;
+  background: rgba(130, 66, 95, 0.15);
+  filter: blur(2px);
+}
+
+.spark {
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 124, 179, 0.85);
+  animation: floatSpark 2.8s linear infinite;
+}
+
+.spark.s1 {
+  left: 20%;
+  bottom: 14px;
+}
+
+.spark.s2 {
+  left: 52%;
+  bottom: 8px;
+  animation-delay: 0.8s;
+}
+
+.spark.s3 {
+  left: 76%;
+  bottom: 12px;
+  animation-delay: 1.5s;
+}
+
+.pet-scene.stage-1 {
+  background: radial-gradient(circle at 50% 40%, #fff9fd, #fff2f8);
+}
+
+.pet-scene.stage-2 {
+  background: radial-gradient(circle at 50% 40%, #fff7f2, #ffeada);
+}
+
+.pet-scene.stage-3 {
+  background: radial-gradient(circle at 50% 40%, #f8fff3, #e9ffd8);
+}
+
+.pet-scene.stage-4 {
+  background: radial-gradient(circle at 50% 40%, #f2fbff, #dff3ff);
+}
+
+@keyframes petBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes floatSpark {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-40px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .habit-form {
+    grid-template-columns: 56px 1fr;
+  }
+
+  .habit-form button {
+    grid-column: 1 / -1;
+  }
+
+  .day {
+    min-height: 74px;
+  }
+}

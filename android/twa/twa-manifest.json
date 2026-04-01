@@ -1,0 +1,20 @@
+{
+  "packageId": "com.zzz.cutehabitpet",
+  "host": "example.com",
+  "name": "可爱习惯打卡",
+  "launcherName": "习惯打卡",
+  "display": "standalone",
+  "themeColor": "#ff9ecf",
+  "navigationColor": "#ff9ecf",
+  "backgroundColor": "#fff4fb",
+  "enableNotifications": false,
+  "startUrl": "/",
+  "iconUrl": "https://example.com/icons/icon-512.png",
+  "maskableIconUrl": "https://example.com/icons/icon-512.png",
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap",
+  "webManifestUrl": "https://example.com/manifest.webmanifest",
+  "fallbackType": "customtabs"
+}
