@@ -1,6 +1,6 @@
 {
   "packageId": "com.zzz.cutehabitpet",
-  "host": "example.com",
+  "host": "dacheng0224-boop.github.io",
   "name": "可爱习惯打卡",
   "launcherName": "习惯打卡",
   "display": "standalone",
@@ -8,13 +8,13 @@
   "navigationColor": "#ff9ecf",
   "backgroundColor": "#fff4fb",
   "enableNotifications": false,
-  "startUrl": "/",
-  "iconUrl": "https://example.com/icons/icon-512.png",
-  "maskableIconUrl": "https://example.com/icons/icon-512.png",
+  "startUrl": "/cute-habit-pet/",
+  "iconUrl": "https://dacheng0224-boop.github.io/cute-habit-pet/icons/icon-512.png",
+  "maskableIconUrl": "https://dacheng0224-boop.github.io/cute-habit-pet/icons/icon-512.png",
   "appVersionName": "1.0.0",
   "appVersionCode": 1,
   "shortcuts": [],
   "generatorApp": "bubblewrap",
-  "webManifestUrl": "https://example.com/manifest.webmanifest",
+  "webManifestUrl": "https://dacheng0224-boop.github.io/cute-habit-pet/manifest.webmanifest",
   "fallbackType": "customtabs"
 }
